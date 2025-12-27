@@ -1,0 +1,24 @@
+JVM (Java Virtual Machine)
+The JVM is the engine that actually runs Java programs.
+It reads the compiled Java code (bytecode) and executes it on the machine.
+The JVM also handles memory management, security, and garbage collection.
+
+JRE (Java Runtime Environment)
+The JRE is everything needed to run a Java program.
+It includes the JVM and standard libraries, but does not include tools for writing or compiling Java code.
+
+JDK (Java Development Kit)
+The JDK is used to develop Java applications.
+It contains the JRE plus developer tools like the Java compiler (javac) and debugger.
+In short:
+JDK = JRE + development tools
+
+
+What is Bytecode?
+When we write Java code (.java files), it is compiled by the Java compiler into bytecode (.class files).
+Bytecode is an intermediate, platform-independent format that the JVM understands.
+This bytecode can run on any system that has a compatible JVM installed.
+
+Write Once, Run Anywhere ?
+“Write once, run anywhere” means that Java code is written and compiled once, and the same compiled code can run on different operating systems without modification.
+This is possible because Java programs run on the JVM, not directly on the operating system. As long as a JVM exists for a platform (Windows, Linux, macOS), the same Java bytecode will work across all of them.
