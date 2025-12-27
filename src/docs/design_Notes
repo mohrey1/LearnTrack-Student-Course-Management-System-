@@ -1,0 +1,20 @@
+Why you used ArrayList instead of array?
+Arrays have a fixed size, so we would need to predict the maximum number of records, which is unrealistic.
+ArrayList automatically resizes at runtime, making it suitable for add/remove operations.
+It provides useful methods like add(), remove(), and iteration support, which simplifies service-layer logic.
+Since this is an in-memory simulation of a real system, ArrayList closely represents how data grows in real applications (later replaced by DB tables).
+
+
+Where did you use static members and why?
+I used static members in the IdGenerator / service classes for generating unique IDs.
+Static fields are shared across all objects, ensuring ID uniqueness.
+IDs should not reset when a new service object is created.
+It represents global application state, similar to auto-increment IDs in a database.
+
+
+Where did you use inheritance and what did you gain from it?
+I used inheritance by creating a Person base class and extending it with Student.
+Code reuse: Common fields (id, name, email) are defined once.
+Cleaner design: Avoids duplication across entities.
+Polymorphism: Method overriding allows Student to customize behavior (getDisplayName()).
+Scalability: Future entities like Instructor or Admin can extend Person easily.
